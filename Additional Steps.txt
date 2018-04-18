@@ -1,0 +1,14 @@
+
+gem "figaro"
+bundle exec figaro install
+
+
+in config/application.yml
+copy and uncomment development:
+
+development:
+	stripe_api_key: 
+	stripe_publishable_key:
+
+create config/initializer/stripe.rb
+	copy paste code

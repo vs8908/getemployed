@@ -51,7 +51,14 @@ class JobsController < ApplicationController
     current_user.card_exp_month = card_exp_month
     current_user.card_exp_year = card_exp_year
     current_user.card_last4 = card_last4
-    current_user.save!
+    #current_user.save!
+
+    begin
+      current_user.save!
+      rescue ActiveRecord::RecordInvalid => invalid
+      puts invalid.record.errors
+    end
+
 
     respond_to do |format|
       if @job.save
@@ -102,4 +109,4 @@ class JobsController < ApplicationController
     def job_params
       params.require(:job).permit(:title, :description, :url, :job_type, :location, :job_author, :remote_ok, :apply_url, :avatar)
     end
-end
+end   
