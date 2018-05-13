@@ -1,0 +1,31 @@
+<div id="home" class="sections">
+  <div class="container">
+    <div class="row">
+        <div class="homepage-style" style="margin-top: 50px; padding: 15px 0px 0px 0px;">
+          <div class="calender"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="/assets/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/responsive.css" />
+
+<!-- Modal -->
+<div class="modal" id="myCalModal" role="dialog" style="z-index: 1050">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal">&times;</button>
+        <div class="modal-header-content">
+          <h4 class="modal-title">Add Event</h4>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body-content"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag 'my_calendar.js' %>

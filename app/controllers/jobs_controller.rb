@@ -16,6 +16,10 @@ class JobsController < ApplicationController
   def show
   end
 
+  def trial
+  end
+
+
   # GET /jobs/new
   def new
     @job = current_user.jobs.build

@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module JobBoard
   class Application < Rails::Application
     config.active_job.queue_adapter = :sidekiq
-    config.application_name = 'V4'
+    config.application_name = 'GetEmployed.com'
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 

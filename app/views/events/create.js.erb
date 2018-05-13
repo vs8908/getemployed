@@ -1,0 +1,20 @@
+<% if @event.errors.present? %>
+  $('.modal-body-content').html("<%=j render 'form', event: @event %>");
+<% else%>
+$('.calender').fullCalendar('removeEvents', [<%= @event.id %>]);
+$('.calender').fullCalendar(
+    'renderEvent',
+     {
+        id: "<%= @event.id %>",
+        title: "<%= @event.title %>",
+        location: "<%= @event.location %>",
+        color: "<%= @event.color %>",
+        public: "<%= @event.public %>",
+        start: '<%= @event.start_date.strftime("%D %H:%m") %>',
+        end: '<%= @event.end_date.strftime("%D %H:%m") %>',
+        allDay: true
+      },
+      true
+  )
+  $("#myCalModal").modal('hide');
+<% end %>

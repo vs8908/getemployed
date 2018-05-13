@@ -32,6 +32,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+gem 'bootstrap-daterangepicker-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -65,6 +68,8 @@ gem 'mini_magick', '~> 4.8'
 gem 'stripe', '~> 3.11'
 gem 'trix', '~> 0.11.1'
 gem "figaro"
+# TODO remove comment
+# gem 'wdm', '~> 0.1.1'
 
 
 group :development, :test do

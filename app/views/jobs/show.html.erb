@@ -1,16 +1,104 @@
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #133;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<ul>
+
+  <!--    <li><%= link_to ' ', jobs_path, class: "navbar-item button is-primary is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-primary is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-primary is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-primary is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-primary is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-primary is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-primary is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-primary is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-primary is-rounded" %></li>       -->
+
+  
+
+  <li><%= link_to 'Home Page', pages_home_path, class: "navbar-item button is-primary is-rounded" %></li>
+
+  <li><%= link_to 'Jobs Board', jobs_path, class: "navbar-item button is-primary is-rounded" %></li>
+
+  <li><%= link_to 'Post Job',  new_job_path, class: "navbar-item button is-primary is-rounded" %></li>
+  <li><%= link_to 'Mock Test', pages_quiz_path, class: "navbar-item button is-danger is-rounded" %></li>
+
+
+<% if user_signed_in? %>
+    <div class="navbar-item has-dropdown is-hoverable">
+        <li><%= link_to current_user.name, edit_user_registration_path, class: "navbar-item button is-danger is-rounded" %></li>
+        <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "navbar-item button is-danger is-rounded" %><li>
+
+    <% else %>
+
+    <p class="control">
+      <%= link_to "Sign In", new_user_session_path, class:"navbar-item button" %>
+    </p>
+    <p class="control">
+      <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button"%>
+    </p>
+  <% end %>
+
+  
+  <!--    <li><%= link_to ' ', jobs_path, class: "navbar-item button is-danger is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-danger is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-danger is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-danger is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-danger is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-danger is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-danger is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-danger is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-danger is-rounded" %></li>
+  <li><%= link_to ' ', jobs_path, class: "navbar-item button is-danger is-rounded" %></li>    -->
+
+
+
+</ul>
+</body>
+
+
 <div class="columns pt4 pb7">
   <div class="column is-7 is-offset-1">
 
     <p class="f7"><i class="fa fa-clock"></i> Posted <%= time_ago_in_words(@job.created_at) %> ago</p>
     <h1 class="title is-2"><%= @job.title %></h1>
 
-    <ul class="list pb4">
-      <li class="inline-block f6 pr2"><%= job_type(@job.job_type) %></li>
+    
+      <h1><%= job_type(@job.job_type) %></h1>
       <li class="inline-block f6 ph2"><i class="fa fa-pin"></i> <%= @job.location %></li>
       <% if @job.remote_ok? %>
-        <li class="inline-block f6 ph2"><i class="fa fa-wifi"></i> Remote Job</li>
+      <li class="inline-block f6 ph2"><i class="fa fa-wifi"></i> Remote Job</li>
       <% end %>
-    </ul>
+    <hr>
 
     <div class="content text-serif f4">
       <%= @job.description.html_safe %>
@@ -37,15 +125,14 @@
     <%= link_to 'Apply to this job', @job.apply_url, class:"button is-rounded is-fullwidth is-link" %>
 
     <% if current_user.try(:admin) || job_author(@job) %>
-      <ul class="pv3">
-        <li class="pv1 f6">Admin controls: </li>
-        <li class="pv1 inline-block">
-          <%= link_to 'View', @job, class: 'button is-small is-link is-outlined' %></li>
-        <li class="pv1 inline-block">
-          <%= link_to 'Edit', edit_job_path(@job), class: 'button is-small is-link is-outlined' %></li>
-        <li class="pv1 inline-block">
-          <%= link_to 'Delete', @job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button is-small is-link is-outlined' %></li>
-      </ul>
+     
+        <h5>Controls:</h5>
+          <%= link_to 'View', @job, class: 'button is-small is-link is-outlined' %>
+
+          <%= link_to 'Edit', edit_job_path(@job), class: 'button is-small is-link is-outlined' %>
+
+          <%= link_to 'Delete', @job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button is-small is-link is-outlined' %>
+     
     <% end %>
   </div>
 </div>

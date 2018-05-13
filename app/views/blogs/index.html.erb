@@ -1,0 +1,68 @@
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Blogs</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item">
+            <%= link_to 'Home', root_path %>
+          </li>
+          <li class="breadcrumb-item active">
+            Blogs
+          </li>
+          <li class="breadcrumb-item">
+            <%= link_to 'New', new_blog_path %>
+          </li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<section class="content">
+  <div class="container-fluid">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <div class="col-lg-12 col-12">
+        <div class="row">
+          <% @blogs.each do |blog| %>
+            <div class="col-md-6">
+              <!-- Box Comment -->
+              <div class="card card-widget">
+                <div class="card-header">
+                  <div class="user-block">
+                    <span class="username">
+                      <%= link_to blog.title, blog_path(blog) %>
+                    </span>
+                    <span class="description">Shared publicly - <% blog.created_at.strftime("%H")%></span>
+                  </div>
+                  <!-- /.user-block -->
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-widget="collapse">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                    <% if current_user.admin %>
+                      <%= link_to blog, method: :delete, data: { confirm: 'Are you sure?', widget: "remove" }, class: "btn btn-tool" do %>
+                        <i class="fa fa-times"></i>
+                      <% end %>
+                    <% end %>
+
+                  </div>
+                  <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <%= image_tag('img/photo2.png', alt: "Photo", class: "img-fluid pad")%>
+                  <p><%= blog.content %></p>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

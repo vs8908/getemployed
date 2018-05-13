@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    
+    <link rel="stylesheet" href="/assets/style.css">
+
+
+    <%= javascript_include_tag 'app.js' %>
+    <%= javascript_include_tag 'question.js' %>
+    <%= javascript_include_tag 'quiz.js' %>
+    
+    <head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #133;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style>
+</head>
+
+
+<body>
+<ul>  
+  <li><%= link_to 'Show Navigation', new_job_path, class: "navbar-item button is-primary is-rounded" %></li>
+</ul>
+</body>
+
+
+
+
+
+</head>
+<body>
+    <div class="grid">
+        <div id="quiz">
+            <h1>Mock</h1>
+            <hr style="margin-bottom: 20px">
+
+            <p id="question"></p>
+
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+
+            <hr style="margin-top: 50px">
+            <footer>
+                <p id="progress">Question x of y</p>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

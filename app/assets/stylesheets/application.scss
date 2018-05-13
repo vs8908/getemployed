@@ -1,4 +1,5 @@
 // *= require trix
+// *= require fullcalendar
 
 @import "bulma";
 @import "functions";
@@ -21,4 +22,8 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 9px !important;
+}
+
+.mb-10{
+  margin-bottom: 10px;
 }
