@@ -19,5 +19,7 @@ Rails.application.config.assets.paths << Rails.root.join('vendor', 'adminlte', '
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'adminlte', 'js')
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'adminlte', 'img')
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'adminlte')
-Rails.application.config.assets.precompile += %w(bootstrap.min.css plugins.css  style.css responsive.css)
+Rails.application.config.assets.paths << Rails.root.join('assets', 'stylesheets', "bootstrap.min.css")
+Rails.application.config.assets.paths << Rails.root.join('assets', 'stylesheets', "*.css")
 Rails.application.config.assets.paths << Rails.root.join('assets', 'javascripts', "*.js")
+Rails.application.config.assets.precompile += %w(bootstrap.min.css plugins.css  style.css responsive.css)
