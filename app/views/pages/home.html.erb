@@ -12,18 +12,18 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <!-- stylesheet_link_tag "style" -->
-        <link rel="stylesheet" href="/assets/bootstrap.min.css">
+        <%= stylesheet_link_tag 'bootstrap.min.css' %>
         <!--<link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
 
 
         <!--For Plugins external css-->
-        <link rel="stylesheet" href="/assets/plugins.css" />
+        <%= stylesheet_link_tag 'plugins.css' %>
 
         <!--Theme custom css -->
-        <link rel="stylesheet" href="/assets/style.css">
+        <%= stylesheet_link_tag 'style.css' %>
 
         <!--Theme Responsive css-->
-        <link rel="stylesheet" href="/assets/responsive.css" />
+        <%= stylesheet_link_tag 'responsive.css' %>
         <%= javascript_include_tag 'start.js' %>
         <%= javascript_include_tag 'modernizr-2.8.3-respond-1.4.2.min.js' %>
     </head>
@@ -37,14 +37,14 @@
 
 
 
-    
+
     <body data-spy="scroll" data-target="#main-navbar">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-        
-        <div id="menubar" class="main-menu">    
+
+
+        <div id="menubar" class="main-menu">
             <nav class="navbar navbar-default navbar-fixed-top">
 
                 <div class="container">
@@ -58,7 +58,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                       
+
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,19 +67,19 @@
                             <li>
                                 <%= link_to "Home", root_path, class: "navbar-item button is-danger is-rounded" %>
                             </li>
-                            
+
                             <li>
                                 <%= link_to "Service", "#works-area", class: "navbar-item button is-primary is-rounded" %>
                             </li>
-                            
+
                             <li>
                                 <%= link_to "About", "#our-team", class: "navbar-item button is-primary is-rounded" %>
                             </li>
-                            
-                            <li>                                
+
+                            <li>
                                 <%= link_to "Portfolio", "#our-portfolio", class: "navbar-item button is-primary is-rounded" %>
                             </li>
-                            
+
                             <li>
                                 <%= link_to "History", "#our-history", class: "navbar-item button is-primary is-rounded" %>
                             </li>
@@ -87,13 +87,13 @@
                             <li>
                                 <%= link_to "Features", "#our-feature", class: "navbar-item button is-primary is-rounded" %>
                             </li>
-                            
+
                             <li>
                                 <%= link_to "Contact", "#our-supports", class: "navbar-item button is-primary is-rounded" %>
                             </li>
 
-                            
-                            
+
+
                             <% if user_signed_in? %>
                                 <li>
                                     <%= link_to 'Schedules', test_events_path, class: "navbar-item button is-danger is-rounded" %>
@@ -108,7 +108,7 @@
 
                                 <li>
                                     <%= link_to 'Blogs', blogs_path, class: "navbar-item button is-danger is-rounded" %>
-                                </li> 
+                                </li>
 
                                 <li>
                                 <%= link_to 'Jobs Board', jobs_path, class: "navbar-item button is-primary is-rounded" %>
@@ -116,7 +116,7 @@
 
                                 <li>
                                     <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "navbar-item button is-danger is-rounded" %>
-                                </li> 
+                                </li>
 
                             <% else %>
                                 <li>
@@ -124,7 +124,7 @@
                                 </li>
                             <% end %>
 
-                            <div class="contact-number text-right"> 
+                            <div class="contact-number text-right">
                                 <ul><li class="">(+91-86999-8222)</li></ul>
                             </div>
 
@@ -150,7 +150,7 @@
                                 </p>
 
                                 <div class="home-btn">
-                                    <button class="btn btn-primary">View More 
+                                    <button class="btn btn-primary">View More
                                         <span>
                                             <i class="fa fa-paper-plane"></i>
                                         </span>
@@ -198,7 +198,7 @@
                             </div>
                         </div>
 
-                    </div>  
+                    </div>
                 </div>
 
             </div>
@@ -217,7 +217,7 @@
 
 
                         </div>
-                    </div>  
+                    </div>
 
 
                     <!-- Example row of columns -->
@@ -233,7 +233,7 @@
                                 <div class="portfolio-item">
                                     <h4>Graduate Programs</h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. laboru
                                     </p>
                                     <button class="btn pt-btn btn-primary">View More</button>
@@ -250,7 +250,7 @@
                                 <div class="portfolio-item">
                                     <h4>Post Graduate Programs</h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. laboru
                                     </p>
                                     <button class="btn pt-btn btn-primary">View More</button>
@@ -273,7 +273,7 @@
                                 <div class="portfolio-item">
                                     <h4>Off Campus Placement</h4>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. laboru
                                     </p>
                                     <button class="btn pt-btn btn-primary">View More</button>
@@ -285,7 +285,7 @@
             </div>
 
 
-            <!-- /container -->       
+            <!-- /container -->
         </section>
 
         <section id="works-area" class="sections">
@@ -297,7 +297,7 @@
 
                         <h4 class="">Services </h4>
                     </div>
-                </div>  
+                </div>
 
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -305,7 +305,7 @@
                             <%= image_tag "map.png" %>
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
         </section>
 
@@ -323,30 +323,30 @@
                     <div class="row">
 
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="features-content active"> 
+                            <div class="features-content active">
                                 <h4><i class="fa fa-database"></i><span>JOB SEEKER REGISTRATION</span></h4>
                                 <p>This section provides the opportunity for a job seeker to get himself registered in this portal. It is after the registration process that he receives his username, password and other login information and also becomes entitled to receive all the other registered member benefits.</p>
                             </div>
                         </div>
 
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="features-content"> 
+                            <div class="features-content">
                                 <h4><i class="fa fa-database"></i><span>JOB SEARCH ENGINE</span></h4>
                                 <p>This utility is to help all job seekers to search for job opportunities. Search options will include job category, location,along with the facilities for a keyword search. All matching search results will be listed, but only registered members will have the opportunity to view job details and apply for the job online.</p>
                             </div>
                         </div>
 
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="features-content"> 
+                            <div class="features-content">
                                 <h4><i class="fa fa-database"></i><span>MEMBER ACCOUNT</span></h4>
                                 <p>All registered members can login to their accounts to applied for Job,view and edit their profiles , our experience in job portal website design helps you in effortlessly managing a recruitment service.</p>
                             </div>
                         </div>
 
                         </div>
-                        
-                    </div>  
-                </div>      
+
+                    </div>
+                </div>
 
 
             </div>
@@ -354,7 +354,7 @@
 
         </section>
 
-      
+
 
         <section id="our-history" class="sections">
             <div class="container">
@@ -365,7 +365,7 @@
 
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="history-img">
-                               
+
                                 <%= image_tag "history-img.png" %>
                             </div>
                         </div>
@@ -374,18 +374,18 @@
 
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="history-wrapper">
-                                <div class="history-heading"> 
+                                <div class="history-heading">
                                     <h5 class="our-history">Our History</h5>
                                 </div>
 
                                 <div class="history-content">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. laboru
                                     </p>
 
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                         consequat.
                                     </p>
 
@@ -498,7 +498,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="team-member">
 
-                                <%= image_tag "team/1.png" , :class => "img-circle" %> 
+                                <%= image_tag "team/1.png" , :class => "img-circle" %>
                                 <h5>Ankit</h5>
                                 <p>UI & UX DESIGNER</p>
                             </div>
@@ -506,7 +506,7 @@
 
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="team-member">
-                                <%= image_tag "team/2.png" , :class => "img-circle" %> 
+                                <%= image_tag "team/2.png" , :class => "img-circle" %>
                                 <h5>Vikas</h5>
                                 <p>DEVELOPER</p>
                             </div>
@@ -514,7 +514,7 @@
 
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="team-member">
-                                <%= image_tag "team/3.png" , :class => "img-circle" %> 
+                                <%= image_tag "team/3.png" , :class => "img-circle" %>
                                 <h5>Anuj</h5>
                                 <p>REVIEWER</p>
                             </div>
@@ -522,7 +522,7 @@
 
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="team-member">
-                                <%= image_tag "team/4.png",  :class => "img-circle" %> 
+                                <%= image_tag "team/4.png",  :class => "img-circle" %>
                                 <h5>Govind</h5>
                                 <p>MARKETTER</p>
                             </div>
@@ -552,7 +552,7 @@
                     <div class="col-sm-6 col-xs-12">
                         <div class="supports-content">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est. laboru
                             </p>
                             <div class="spt-btn"><button class="btn btn-primary">SUPPORT CENTER</button></div>
@@ -566,7 +566,7 @@
 
                 </div>
 
-            </div> <!-- /container -->       
+            </div> <!-- /container -->
         </section>
 
         <section id="hire-us" class="sections">
@@ -581,7 +581,7 @@
 
                                 <div class="creative-works">
                                     <h3>NEED CAREER ASSISTANCE?</h3>
-                                    
+
                                     <a href= users/sign_in ><button class="btn hire-btn btn-primary">SignUp Today</button></a>
                                 </div>
 
@@ -592,7 +592,7 @@
                     </div>
                 </div>
 
-            </div> <!-- /container -->  
+            </div> <!-- /container -->
 
         </section>
 
@@ -673,7 +673,7 @@
                         <p>Made with <i class="fa fa-heart"></i> by <a target="_blank" href="http://www.google.co.in"> Team VAGAA </a>2018. All rights reserved.</p>
                     </div>
 
-                </div>  
+                </div>
             </div>
 
         </footer>
