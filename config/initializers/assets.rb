@@ -20,6 +20,7 @@ Rails.application.config.assets.paths << Rails.root.join('vendor', 'adminlte', '
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'adminlte', 'img')
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'adminlte')
 Rails.application.config.assets.paths << Rails.root.join('assets', 'stylesheets', "*.css")
+Rails.application.config.assets.paths << Rails.root.join('assets', 'stylesheets', "application.scss")
 Rails.application.config.assets.paths << Rails.root.join('assets', 'stylesheets', "*.min.css")
 Rails.application.config.assets.paths << Rails.root.join('assets', 'stylesheets', "*.scss")
 Rails.application.config.assets.paths << Rails.root.join('assets', 'javascripts', "*.js")
