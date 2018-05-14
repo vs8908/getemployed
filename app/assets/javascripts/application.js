@@ -12,6 +12,7 @@
 //= require jquery-1.11.2.min
 //= require rails-ujs
 //= require turbolinks
-//= require moment 
+//= require moment
 //= require fullcalendar
+//= require charges
 //= require_tree .
