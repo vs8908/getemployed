@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    var quiz = new Quiz(questions);
+
+    // display quiz
+    populate();
     function populate() {
     if(quiz.isEnded()) {
         showScores();
@@ -57,10 +61,7 @@ var questions = [
     new Question("1+2=?", ["3", "4", "5", "6"], "6"),
     new Question("1+2=?", ["3", "4", "5", "6"], "6")
 ];
-    var quiz = new Quiz(questions);
 
-    // display quiz
-    populate();
 })
 // create quiz
 
