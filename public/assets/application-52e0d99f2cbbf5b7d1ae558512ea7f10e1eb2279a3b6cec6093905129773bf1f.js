@@ -20821,11 +20821,7 @@ fcViews.listYear = {
 
 return FC; // export for Node/CommonJS
 });
-function populate(attr_quiz) {
-    debugger;
-    if (typeof attr_quiz != 'undefined' && attr_quiz){
-        quiz = attr_quiz
-    }
+function populate() {
     if(quiz.isEnded()) {
         showScores();
     }
