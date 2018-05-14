@@ -1,9 +1,7 @@
-$(document).ready(function(){
-    var quiz = new Quiz(questions);
-
-    // display quiz
-    populate();
-    function populate() {
+function populate(attr_quiz) {
+    if (typeof attr_quiz != 'undefined' && attr_quiz){
+        quiz = attr_quiz
+    }
     if(quiz.isEnded()) {
         showScores();
     }
@@ -62,8 +60,11 @@ var questions = [
     new Question("1+2=?", ["3", "4", "5", "6"], "6")
 ];
 
-})
 // create quiz
+var quiz = new Quiz(questions);
+
+// display quiz
+populate();
 
 
 
