@@ -5,6 +5,7 @@
     <title>Quiz</title>
 
     <%= stylesheet_link_tag 'style.css' %>
+    <%= tag :meta, name: "stripe-public-key", content: Figaro.env.stripe_publishable_key %>
  <head>
 <style>
 ul {
