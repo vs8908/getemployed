@@ -61,7 +61,7 @@ var questions = [
 var quiz = new Quiz(questions);
 
 // display quiz
-populate();
+populate(quiz);
 
 
 
