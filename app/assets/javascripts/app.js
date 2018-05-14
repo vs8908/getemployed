@@ -57,13 +57,11 @@ var questions = [
     new Question("1+2=?", ["3", "4", "5", "6"], "6")
 ];
 
-$(document).ready(function(){
-    var quiz = new Quiz(questions);
-
-    // display quiz
-    populate();
-})
 // create quiz
+var quiz = new Quiz(questions);
+
+// display quiz
+populate();
 
 
 

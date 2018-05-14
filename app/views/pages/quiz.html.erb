@@ -75,5 +75,9 @@ li a:hover:not(.active) {
 <%= javascript_include_tag 'app.js' %>
 <%= javascript_include_tag 'question.js' %>
 <%= javascript_include_tag 'quiz.js' %>
+<script>
+    var quiz = new Quiz(questions);
+    populate();
+</script>
 </body>
 </html>
