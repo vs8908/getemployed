@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
     <title>Quiz</title>
     <%= stylesheet_link_tag 'style.css' %>
-    <%= tag :meta, name: "stripe-public-key", content: Figaro.env.stripe_publishable_key %>
  <head>
 <style>
 ul {
@@ -75,7 +74,6 @@ li a:hover:not(.active) {
 <%= javascript_include_tag 'start.js' %>
 <%= javascript_include_tag 'app.js' %>
 <%= javascript_include_tag 'question.js' %>
-<%= javascript_include_tag 'charges.js' %>
 <%= javascript_include_tag 'quiz.js' %>
 </body>
 </html>
