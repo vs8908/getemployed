@@ -3,15 +3,9 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Quiz</title>
-    
+
     <%= stylesheet_link_tag 'style.css' %>
-
-
-    <%= javascript_include_tag 'app.js' %>
-    <%= javascript_include_tag 'question.js' %>
-    <%= javascript_include_tag 'quiz.js' %>
-    
-    <head>
+ <head>
 <style>
 ul {
     list-style-type: none;
@@ -45,7 +39,7 @@ li a:hover:not(.active) {
 
 
 <body>
-<ul>  
+<ul>
   <li><%= link_to 'Show Navigation', new_job_path, class: "navbar-item button is-primary is-rounded" %></li>
 </ul>
 </body>
@@ -79,6 +73,8 @@ li a:hover:not(.active) {
 
 
 
-
+<%= javascript_include_tag 'app.js' %>
+<%= javascript_include_tag 'question.js' %>
+<%= javascript_include_tag 'quiz.js' %>
 </body>
 </html>
