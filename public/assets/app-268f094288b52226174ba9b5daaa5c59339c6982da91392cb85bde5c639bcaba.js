@@ -1,6 +1,6 @@
-function populate() {
+function populate(quiz) {
     if(quiz.isEnded()) {
-        showScores();
+        showScores(quiz);
     }
     else {
         // show question
@@ -12,29 +12,29 @@ function populate() {
         for(var i = 0; i < choices.length; i++) {
             var element = document.getElementById("choice" + i);
             element.innerHTML = choices[i];
-            guess("btn" + i, choices[i]);
+            guess("btn" + i, choices[i], quiz);
         }
 
-        showProgress();
+        showProgress(quiz);
     }
 };
 
-function guess(id, guess) {
+function guess(id, guess, quiz) {
     var button = document.getElementById(id);
     button.onclick = function() {
         quiz.guess(guess);
-        populate();
+        populate(quiz);
     }
 };
 
 
-function showProgress() {
+function showProgress(quiz) {
     var currentQuestionNumber = quiz.questionIndex + 1;
     var element = document.getElementById("progress");
     element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
 };
 
-function showScores() {
+function showScores(quiz) {
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
     var element = document.getElementById("quiz");
