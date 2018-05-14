@@ -1,4 +1,5 @@
 function populate(quiz) {
+    debugger;
     if(quiz.isEnded()) {
         showScores(quiz);
     }
