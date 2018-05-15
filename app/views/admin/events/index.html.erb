@@ -34,6 +34,7 @@
                 <th>Title</th>
                 <th>location</th>
                 <th>Start date (mm/dd/yy)</th>
+                <th>End date (mm/dd/yy)</th>
                 <th style="width: 40px">Actions</th>
               </tr>
               <% @events.each do |event| %>
@@ -48,7 +49,10 @@
                     <%= event.location %>
                   </td>
                   <td>
-                    <%= event.start_date.strftime("%D %H:%m") %>
+                    <%= event.start_date.strftime("%D %H:%m") if event.end_date.present? %>
+                  </td>
+                  <td>
+                    <%= event.end_date.strftime("%D %H:%m") if event.end_date.present? %>
                   </td>
                   <td>
                     <%= link_to 'Edit', edit_admin_event_path(event) %>

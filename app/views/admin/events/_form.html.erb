@@ -23,14 +23,15 @@
         <div class="form-group">
           <%= f.input :start_date, as: :string,
                               order: [:month, :year, :day], input_html: { class: "form-control col-sm-3 pull-left" },
-                              label_html: { class: 'col-sm-3 pull-left' } %>
+                              label_html: { class: 'col-sm-3 pull-left' },
+                              placeholder: '04/04/2018 00:00' %>
           <div class="clearfix"></div>
         </div>
         <div class="form-group">
           <%= f.input :end_date, as: :string,
                                    start_year: Date.today.year - 90, end_year: Date.today.year + 5, discard_day: false,
                               order: [:month, :year, :day], input_html: { class: "form-control col-sm-3 pull-left" },
-                              label_html: { class: 'col-sm-3 pull-left' } %>
+                              label_html: { class: 'col-sm-3 pull-left' }, placeholder: '05/04/2018 00:00' %>
           <div class="clearfix"></div>
         </div>
       </div>
