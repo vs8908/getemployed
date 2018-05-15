@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get "/pages/home" => "pages#home"
-  get "/pages/quiz" => "pages#quiz" 
+  get "/pages/quiz" => "pages#quiz"
   get '/my_calender' => 'pages#my_calender'
   get '/test_events' => 'pages#test_events'
 
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :blogs
   namespace :admin do
     resources :users, only: %I[index update]
+    resources :events
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,5 +1,4 @@
 <h1>New Event</h1>
 
-<%= render 'form', event: @event %>
+<%= render partial: "form", locals: { event: @event, is_create: true } %>
 
-<%= link_to 'Back', events_path %>
