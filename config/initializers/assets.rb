@@ -24,4 +24,5 @@ Rails.application.config.assets.paths << Rails.root.join('assets', 'stylesheets'
 Rails.application.config.assets.paths << Rails.root.join('assets', 'stylesheets', "*.min.css")
 Rails.application.config.assets.paths << Rails.root.join('assets', 'stylesheets', "*.scss")
 Rails.application.config.assets.paths << Rails.root.join('assets', 'javascripts', "*.js")
+Rails.application.config.assets.paths << Rails.root.join('assets', 'javascripts', "charges.js")
 Rails.application.config.assets.precompile += %w(bootstrap.min.css plugins.css  style.css responsive.css)
