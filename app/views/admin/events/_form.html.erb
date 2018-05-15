@@ -7,7 +7,6 @@
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <% byebug %>
     <% url = is_create ? admin_events_path : admin_event_path %>
     <% data_method = is_create ? :post : :patch %>
     <%= simple_form_for(@event, url: url, method: data_method, html: {role: "form"}) do |f| %>
@@ -22,8 +21,7 @@
           <%= f.input :location, input_html: { class: "form-control" } %>
         </div>
         <div class="form-group">
-          <%= f.input :start_date, as: :date,
-                                   start_year: Date.today.year - 90, end_year: Date.today.year + 5, discard_day: false,
+          <%= f.input :start_date, as: :string,
                               order: [:month, :year, :day], input_html: { class: "form-control col-sm-3 pull-left" },
                               label_html: { class: 'col-sm-3 pull-left' } %>
           <div class="clearfix"></div>

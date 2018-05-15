@@ -1,6 +1,6 @@
 module Admin
   class EventsController < Admin::BaseController
-    before_action :set_event, only: %I[update]
+    before_action :set_event, only: %I[update edit]
     layout 'theme'
 
     def index
@@ -12,7 +12,11 @@ module Admin
     end
 
     def create
-      binding.pry
+      byebug
+      @event = Event.new(admin_event_attributes)
+    end
+
+    def edit
     end
 
     def update
@@ -31,7 +35,7 @@ module Admin
     end
 
     def admin_event_attributes
-      params.require(:event).permit(:admin)
+      params.require(:event).permit(:title, :location)
     end
   end
 end
