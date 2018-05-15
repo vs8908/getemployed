@@ -12,8 +12,17 @@ module Admin
     end
 
     def create
-      byebug
       @event = Event.new(admin_event_attributes)
+      start_date = Date.parse(params[:event][:start_date].to_s)
+      end_date = Date.parse(params[:event][:end_date].to_s)
+      @event.assign_attributes(start_date: start_date, end_date: end_date, user_id: current_user.id, public: true)
+      respond_to do |format|
+        if @event.save
+          format.html { redirect_to admin_events_path, notice: 'Event was successfully created.' }
+        else
+          format.html { render :new }
+        end
+      end
     end
 
     def edit
