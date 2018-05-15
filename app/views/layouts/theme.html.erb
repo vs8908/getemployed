@@ -178,14 +178,7 @@
                   </p>
                 <% end %>
               </li>
-              <li class="nav-item">
-                <%= link_to "javascript:void(0)", class: "nav-link", data: {url: "#works-area"} do %>
-                  <i class="nav-icon fa fa-plus-square-o"></i>
-                  <p>
-                    Service
-                  </p>
-                <% end %>
-              </li>
+              
               <li class="nav-item">
                 <%= link_to "javascript:void(0)", class: "nav-link", data: {url: "#our-team"} do %>
                   <i class="nav-icon fa fa-th"></i>
@@ -194,15 +187,7 @@
                   </p>
                 <% end %>
               </li>
-              <li class="nav-item">
-                <%= link_to "javascript:void(0)", class: "nav-link", data: {url: "#our-portfolio"} do %>
-                  <i class="nav-icon fa fa-pie-chart"></i>
-                  <p>
-                    Portfolio
-                  </p>
-                <% end %>
-              </li>
-
+                
               <% if current_user.admin?%>
                 <li class="nav-item has-treeview">
                   <a href="#" class="nav-link">
