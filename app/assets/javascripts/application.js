@@ -14,4 +14,5 @@
 //= require turbolinks
 //= require moment
 //= require fullcalendar
+//= require charges
 //= require_tree .
