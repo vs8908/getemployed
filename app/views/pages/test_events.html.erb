@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <%= link_to "Home", root_path, class: "navbar-item button is-danger is-rounded" %>
+                        <%= link_to "Home", root_path, class: "navbar-item button is-primary is-rounded" %>
                     </li>
                     
                     <li>
@@ -59,14 +59,14 @@
                     
                     <% if user_signed_in? %>
                         <li>
-                            <%= link_to 'Schedules', test_events_path, class: "navbar-item button is-danger is-rounded" %>
+                            <%= link_to 'Schedules', test_events_path, class: "navbar-item button is-primary is-rounded" %>
                         </li>
                         <li>
-                            <%= link_to 'My calendar', my_calender_path, class: "navbar-item button is-danger is-rounded", data: { no_turbolink: true } %>
+                            <%= link_to 'My calendar', my_calender_path, class: "navbar-item button is-primary is-rounded", data: { no_turbolink: true } %>
                         </li>
 
                         <li>
-                            <%= link_to 'Mocks', pages_quiz_path, class: "navbar-item button is-danger is-rounded" %>
+                            <%= link_to 'Mocks', pages_quiz_path, class: "navbar-item button is-primary is-rounded" %>
                         </li> 
 
                         <li>
